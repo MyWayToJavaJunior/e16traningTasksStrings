@@ -16,9 +16,11 @@ public class Run {
                 Pattern.compile("[A-Z][a-z]+"), Pattern.compile("[0-9][a-z]+"),
                 Pattern.compile("[a-zA-Z][0-9]"), Pattern.compile("[0-9][a-zA-Z][0-9][a-zA-Z]"),
                 Pattern.compile("[1]\\w+[a]"), Pattern.compile("\\bqWaKe\\b")};
+        System.out.println("in string: (" + INPUT_STRING + ")\n");
+        int count = 1;
         for (Pattern pattern : patterns) {
             Matcher m = pattern.matcher(INPUT_STRING);
-            System.out.print("pattern " + pattern.toString());
+            System.out.printf("%3d : pattern %-28.60s", count++, pattern.toString());
             System.out.print(" ( ");
             while (m.find()) {
                 System.out.print(m.group() + " ");

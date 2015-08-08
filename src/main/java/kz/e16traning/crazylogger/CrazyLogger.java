@@ -11,11 +11,11 @@ import java.util.regex.Pattern;
  *
  */
 public class CrazyLogger {
-    private static CrazyLogger instance;
     private static final Calendar calendar =
             Calendar.getInstance();
     private static final StringBuilder loggerData =
             new StringBuilder(1024);
+    private static CrazyLogger instance;
     private SimpleDateFormat dateFormat =
             new SimpleDateFormat("dd.MM.yyyy hh:mm");
 
@@ -28,26 +28,40 @@ public class CrazyLogger {
         return instance;
     }
 
+    private String getLog() {
+        return loggerData.toString();
+    }
+
+    private String getLog(Date byDate) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+        return getLog(dateFormat.format(byDate));
+    }
+
+    private String getLog(String byString) {
+        Pattern pattern = Pattern.compile(".*" + byString + ".*\\n");
+        Matcher matcher = pattern.matcher(loggerData.toString());
+        StringBuilder result = new StringBuilder();
+        while (matcher.find()) {
+            result.append(matcher.group().trim()).append("\n");
+        }
+        return result.toString();
+    }
+
     public void log(String message) {
         loggerData.append(dateFormat.format(calendar.getTime()))
                 .append(" - ").append(message).append("\n");
     }
 
-    public void showLog() {
-        System.out.println(loggerData.toString());
+    public void printLog() {
+        System.out.println(getLog());
     }
 
-    public void showLog(Date byDate) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
-        showLog(dateFormat.format(byDate));
+    public void printLog(String byString) {
+        System.out.println(getLog(byString));
     }
 
-    public void showLog(String byString) {
-        Pattern pattern = Pattern.compile(".*" + byString + ".*\\n");
-        Matcher matcher = pattern.matcher(loggerData.toString());
-        while (matcher.find()) {
-            System.out.println(matcher.group().trim());
-        }
+    public void printLog(Date byDate) {
+        System.out.println(getLog(byDate));
     }
 
 }

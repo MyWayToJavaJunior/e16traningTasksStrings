@@ -14,11 +14,11 @@ public class Run {
         logger.log("Error 2");
         logger.log("Error 3");
         logger.log("Error 4");
-        logger.showLog();
+        logger.printLog();
         System.out.println("---");
-        logger.showLog("Error");
+        logger.printLog("Error 2");
         System.out.println("---");
         Calendar calendar = Calendar.getInstance();
-        logger.showLog(calendar.getTime());
+        logger.printLog(calendar.getTime());
     }
 }
