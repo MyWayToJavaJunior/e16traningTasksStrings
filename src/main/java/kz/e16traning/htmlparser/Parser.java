@@ -113,7 +113,6 @@ public class Parser implements IParse {
                 }
                 count++;
             }
-
             kin.close();
         } catch (IOException ex) {
             ex.printStackTrace();
