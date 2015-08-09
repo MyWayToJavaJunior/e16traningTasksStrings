@@ -1,8 +1,6 @@
 package kz.e16traning.htmlparser;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -13,7 +11,6 @@ import java.util.regex.Pattern;
  *
  */
 public class Parser implements IParse {
-
     public void parseD() {
         Pattern fPattern = Pattern.compile("[Р|р](ис[.]|исунке)[ ][0-9]{1,2}([ ]?<|[ ]?&|,?[ ][а-я]{2,}|,[ ]?[0-9]{1,2}|[.]|[)]|.*?[)]| и [0-9]{1,2}|)");
         Pattern dPattern = Pattern.compile("\\d{1,2}");
@@ -81,10 +78,10 @@ public class Parser implements IParse {
                         Matcher p = pPattern.matcher(s);
                         String sd = d.group();
                         System.out.println(" - " + sd);
-                        ref.put(count*1000+m.start(), sd);
+                        ref.put(count * 1000 + m.start(), sd);
                         int pCount = 0;
                         while(p.find()){
-                            ref.put(count*1000+m.start() + pCount++, sd + p.group());
+                            ref.put(count * 1000 + m.start() + pCount++, sd + p.group());
                             System.out.println(sd + p.group());
                         }
                     }
@@ -123,8 +120,8 @@ public class Parser implements IParse {
         }*/
 
         for (int i = 0; i < 20000000; i++) {
-            if (ref.containsKey(i)) System.out.println(ref.get(i));
-            if (pic.containsKey(i)) System.out.println(pic.get(i));
+            if (ref.containsKey(i)) System.out.println(i + " : " + ref.get(i));
+            if (pic.containsKey(i)) System.out.println(i + " : " + pic.get(i));
         }
 
     }
