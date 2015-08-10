@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class Run {
     private static ResourceBundle rb;
-    public static void main(String[] args) throws UnsupportedEncodingException {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         try {
             System.out.println("ru - 0 / en - 1");
@@ -31,6 +31,8 @@ public class Run {
             } else {
                 System.out.println(getPropByKey("menu1.answer2"));
             }
+        } catch (UnsupportedEncodingException e) {
+            System.out.println("Кодировка не поддерживается");
         } finally {
             sc.close();
         }
