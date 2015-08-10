@@ -1,4 +1,4 @@
-Задание 1.  Использование регулярных выражений (regex)[https://github.com/MyWayToJavaJunior/e16traningTasksStrings/tree/master/src/main/java/kz/e16traning/regex]
+Задание 1.  Использование регулярных выражений -  [regex](https://github.com/MyWayToJavaJunior/e16traningTasksStrings/tree/master/src/main/java/kz/e16traning/regex)
 ----------------------------------------------
 
 Подсчитать в строке количество включений  следующих последовательностей символов:
@@ -14,19 +14,19 @@
  - 10. конкретное слово.
 
 
-Задание 2. Строковые классы [crazylogger](https://github.com/MyWayToJavaJunior/e16traningTasksStrings/tree/master/src/main/java/kz/e16traning/crazylogger)
+Задание 2. Строковые классы - [crazylogger](https://github.com/MyWayToJavaJunior/e16traningTasksStrings/tree/master/src/main/java/kz/e16traning/crazylogger)
 ----------------------------
 
 Необходимо создать класс CrazyLogger, ведущий журнал лога, используя как накопитель объект типа StringBuilder. Логгер должен содержать методы поиска определенной информации в таком логе [с возможностью вывода ее в поток ввода вывода].Информацию логгер хранит в форматированном виде: dd-mm-YYYY :hh-mm – message;.
 
 
-Задание 3. Locale и ResourceBundle [locale](https://github.com/MyWayToJavaJunior/e16traningTasksStrings/tree/master/src/main/java/kz/e16traning/locale)
+Задание 3. Locale и ResourceBundle -  [locale](https://github.com/MyWayToJavaJunior/e16traningTasksStrings/tree/master/src/main/java/kz/e16traning/locale)
 ---------------------------------
 
 Разработать приложение, позволяющее по выбору пользователя использовать русский или английский язык, для отображения информации.  Приложение должно представлять собой перечень вопросов под номерами (на английском или русском соответственно). Выбрав номер вопроса пользователь может узнать ответ на него.
 
 
-Задание 4. Регулярные выражения [htmlparser](https://github.com/MyWayToJavaJunior/e16traningTasksStrings/tree/master/src/main/java/kz/e16traning/htmlparserv)
+Задание 4. Регулярные выражения -  [htmlparser](https://github.com/MyWayToJavaJunior/e16traningTasksStrings/tree/master/src/main/java/kz/e16traning/htmlparserv)
 ------------------------------
 
 Необходимо определить в тексте статьи* (html-файл), ссылается ли автор на рисунки последовательно или нет, а также выделить все предложения, в которых встречаются ссылки на рисунки. Для разбора текста использовать регулярные выражения.
